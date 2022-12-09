@@ -10,7 +10,7 @@ moveCrates stacks instructions =
         if i==src 
             then drop n stack 
             else if i == dst
-                then (reverse toTransfer) ++ stack
+                then (toTransfer) ++ stack
                 else stack
         | (i, stack) <- zip [0..] stacks] $ tail instructions
 
